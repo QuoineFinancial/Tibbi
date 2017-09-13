@@ -26,15 +26,15 @@ public protocol CellSelectable {
     var action: CellAction { get set }
 }
 
-public struct CellDeselectionModel {
+public struct CellDeselection {
     var shouldDeselect = true
     var animated = true
-    
+
     public init() { }
 }
 
 public protocol CellDeselectable {
-    var deselectionModel: CellDeselectionModel { get set }
+    var deselection: CellDeselection { get set }
 }
 
 public struct SectionView {
@@ -50,7 +50,7 @@ public struct SectionView {
 public struct SectionIndexModel {
     var shouldShowIndexes = true
     var indexes: [String]
-    
+
     public init(indexes: [String]) {
         self.indexes = indexes.flatMap { title -> String? in
             return title.characters.count == 0 ? nil :
@@ -68,7 +68,7 @@ public struct Section {
     public var header: SectionView
     public var footer: SectionView
     public var indexTitle: String?
-    
+
     public init() {
         self.rows = []
         self.header = SectionView()

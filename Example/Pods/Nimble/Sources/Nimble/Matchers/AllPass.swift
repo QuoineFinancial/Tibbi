@@ -62,10 +62,10 @@ extension NMBObjCMatcher {
             let location = actualExpression.location
             let actualValue = try! actualExpression.evaluate()
             var nsObjects = [NSObject]()
-            
+
             var collectionIsUsable = true
             if let value = actualValue as? NSFastEnumeration {
-                let generator = NSFastEnumerationIterator(value)
+                var generator = NSFastEnumerationIterator(value)
                 while let obj = generator.next() {
                     if let nsObject = obj as? NSObject {
                         nsObjects.append(nsObject)
@@ -77,7 +77,7 @@ extension NMBObjCMatcher {
             } else {
                 collectionIsUsable = false
             }
-            
+
             if !collectionIsUsable {
                 failureMessage.postfixMessage =
                   "allPass only works with NSFastEnumeration (NSArray, NSSet, ...) of NSObjects"
@@ -85,7 +85,7 @@ extension NMBObjCMatcher {
                 failureMessage.to = ""
                 return false
             }
-            
+
             let expr = Expression(expression: ({ nsObjects }), location: location)
             let elementEvaluator: (Expression<NSObject>, FailureMessage) -> Bool = {
                 expression, failureMessage in
