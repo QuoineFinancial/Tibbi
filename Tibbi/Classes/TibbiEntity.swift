@@ -27,8 +27,8 @@ public protocol CellSelectable {
 }
 
 public struct CellDeselection {
-    var shouldDeselect = true
-    var animated = true
+    public var shouldDeselect = true
+    public var animated = true
 
     public init() { }
 }
