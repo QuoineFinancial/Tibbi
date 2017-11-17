@@ -1,11 +1,11 @@
 PODS:
-  - Nimble (5.1.1)
-  - Quick (1.0.0)
+  - Nimble (7.0.2)
+  - Quick (1.2.0)
   - Tibbi (0.1.0)
 
 DEPENDENCIES:
-  - Nimble (~> 5.1.1)
-  - Quick (~> 1.0.0)
+  - Nimble
+  - Quick
   - Tibbi (from `../`)
 
 EXTERNAL SOURCES:
@@ -13,10 +13,10 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Nimble: 415e3aa3267e7bc2c96b05fa814ddea7bb686a29
-  Quick: 8024e4a47e6cc03a9d5245ef0948264fc6d27cff
+  Nimble: bfe1f814edabba69ff145cb1283e04ed636a67f2
+  Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
   Tibbi: 4898261bc2831ffdb067c0c7fc690c29387836ad
 
-PODFILE CHECKSUM: ed4cd15b0e42c6aedb96f51f9b2cfdbbd213bd69
+PODFILE CHECKSUM: 79739487d30f9b692e9389910ecfa64ad4e5b599
 
 COCOAPODS: 1.2.1

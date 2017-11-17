@@ -53,9 +53,8 @@ public struct SectionIndexModel {
 
     public init(indexes: [String]) {
         self.indexes = indexes.flatMap { title -> String? in
-            return title.characters.count == 0 ? nil :
-                title.substring(to: title.index(title.startIndex, offsetBy: 1))
-        }
+            return title.isEmpty ? nil : String(title[..<title.startIndex])
+		}
     }
 }
 

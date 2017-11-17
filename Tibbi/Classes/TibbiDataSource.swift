@@ -54,7 +54,7 @@ open class TibbiDataSource: NSObject, UITableViewDataSource, UITableViewDelegate
         self.tableViewDidSelectRow(with: viewModel, at: indexPath)
     }
 
-    open func tableViewDidSelectRow(with viewModel:Any, at indexPath: IndexPath) {
+    open func tableViewDidSelectRow(with viewModel: Any, at indexPath: IndexPath) {
         if let rowViewModel = viewModel as? CellSelectable {
             rowViewModel.action(indexPath)
         }
@@ -101,7 +101,7 @@ open class TibbiDataSource: NSObject, UITableViewDataSource, UITableViewDelegate
     open func sectionIndexTitles(for tableView: UITableView) -> [String]? {
         return sections.flatMap {
             if let title = $0.header.title {
-                return title.substring(to: title.index(title.startIndex, offsetBy: 1))
+				return String(title[..<title.startIndex])
             }
             return nil
         }

@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Tibbi'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of Tibbi.'
+  s.version          = '1.0.2'
+  s.summary          = 'This library makes working with tableViews a pleasure.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,20 +18,20 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+No more boilerplate dataSources for the tableView - simply create the viewModels, the library takes the rest.
                        DESC
 
-  s.homepage         = 'https://github.com/Gudmundr/Tibbi'
+  s.homepage         = 'https://github.com/cristian-azov/Tibbi'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Gudmundr' => 'cristian.azov@mttnow.com' }
-  s.source           = { :git => 'https://github.com/Gudmundr/Tibbi.git', :tag => s.version.to_s }
+  s.author           = { 'Cristian Azov' => 'cristian.azov@gmail.com' }
+  s.source           = { :git => 'https://github.com/cristian-azov/Tibbi.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'Tibbi/Classes/**/*'
-  
+
   # s.resource_bundles = {
   #   'Tibbi' => ['Tibbi/Assets/*.png']
   # }
