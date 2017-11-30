@@ -17,7 +17,7 @@ public protocol CellStaticHeightAdopting {
 }
 
 public protocol CellConfigurable {
-    func configure(with viewModel: Any)
+    func configure(with cellViewModel: Any)
 }
 
 public typealias CellAction = ((IndexPath) -> Void)
